@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to QuasarPy’s documentation! &mdash; QuasarPy  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> QuasarPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to QuasarPy’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#module-QuasarPy">API</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">QuasarPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to QuasarPy’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-quasarpy-s-documentation">
+<h1>Welcome to QuasarPy’s documentation!<a class="headerlink" href="#welcome-to-quasarpy-s-documentation" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="module-QuasarPy">
+<span id="api"></span><h1>API<a class="headerlink" href="#module-QuasarPy" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.ARBF">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">ARBF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">InterpMethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.ARBF" title="Permalink to this definition"></a></dt>
+<dd><p>ARBF interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Query data input, from which to make predictions.</p></li>
+<li><p><strong>InterpMethod</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'linear'</em>) – <p>Define a radial basis function (type of interpolation)</p>
+<p>0: ‘multiquadratic’,
+1: ‘invMultiquadratic’,
+2: ‘thinPlateSpline’,
+3: ‘gaussian’,
+4. ‘linear’.</p>
+</p></li>
+<li><p><strong>Radius</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – 0.0: to be automatically calculated from data.</p></li>
+<li><p><strong>Normalize</strong> (<em>int</em><em>, </em><em>default 0</em>) – <p>Type of normalization to be performed</p>
+<p>0: No normalization,
+1: Min/Max normalization,
+2: Variance normalization.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.DOE_generation">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">DOE_generation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nsites</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nseed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_MINMAX</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.DOE_generation" title="Permalink to this definition"></a></dt>
+<dd><p>Generate and return a DoE as a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keyword</strong> (<em>str</em><em>, </em><em>{'box_behnken'</em><em>, </em><em>'grid'</em><em>, </em><em>'halton'</em><em>, </em><em>'hammersley'</em><em>, </em><em>'improved_latin_hypercube'</em><em>, </em><em>'latin_hypercube'</em><em>, </em><em>'optimal_latin_hypercube'</em><em>, </em><em>'minmax'</em><em>, </em><em>'montecarlo'</em><em>, </em><em>'normal'</em><em>, </em><em>'a_optimal'</em><em>, </em><em>'full_factorial'</em><em>, </em><em>'voronoi'}</em>) – Method/distribution used for points generation.</p></li>
+<li><p><strong>Nsites</strong> (<em>int</em>) – Number of points to generate.</p></li>
+<li><p><strong>Nseed</strong> (<em>int</em>) – Random seed.</p></li>
+<li><p><strong>mat_MINMAX</strong> (<em>pandas.DataFrame</em>) – DataFrame containing the name and range of the parameters to be used to create the DoE file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>yq</strong> – Set of DOE points.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The rest of the parameters DoE generator takes as input are set to default value:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">keyword</span> <span class="o">==</span> <span class="s1">&#39;voronoi&#39;</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">NoM</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">elif</span> <span class="p">(</span><span class="n">keyword</span> <span class="o">==</span> <span class="s1">&#39;a_optimal&#39;</span> <span class="ow">or</span> <span class="n">keyword</span> <span class="o">==</span> <span class="s1">&#39;full_factorial&#39;</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">NoM</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">else</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">NoM</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Kscale</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rmin</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rmax</span> <span class="o">=</span> <span class="mf">200.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.DOE_improvement">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">DOE_improvement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxNewPoints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nseed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.DOE_improvement" title="Permalink to this definition"></a></dt>
+<dd><p>Add points to an input DoE file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_A</strong> (<em>numpy.ndarray</em>) – Data to which add points.</p></li>
+<li><p><strong>maxNewPoints</strong> (<em>int</em>) – Number of points to add to input file.</p></li>
+<li><p><strong>Nseed</strong> (<em>int</em>) – Random seed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>yq</strong> – Set of DOE points.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.DOE_scaling">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">DOE_scaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_MINMAX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.DOE_scaling" title="Permalink to this definition"></a></dt>
+<dd><p>Scale an input DoE file between a min and max values given.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_A</strong> (<em>numpy.ndarray</em>) – Data to be scaled.</p></li>
+<li><p><strong>mat_MINMAX</strong> (<em>pandas.DataFrame</em>) – DataFrame containing the bounds for projection of DOE (new range).</p></li>
+<li><p><strong>Kscale</strong> (<em>int</em><em>, </em><em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3}</em><em>, </em><em>default=3</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>yq</strong> – Set of scaled points.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The rest of the parameters are set to default value:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">Kscale</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">rmin</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">rmax</span> <span class="o">=</span> <span class="mf">200.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">rmin</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">rmax</span> <span class="o">=</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.DOE_scatterplot">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">DOE_scatterplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.DOE_scatterplot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot an input DoE file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mat_A</strong> (<em>numpy.ndarray</em>) – Data to plot.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ax_list</strong> – List containing a dictionary per plot to create. The key of the first entry in the dictionary will be the x axis name and the value the content to plot in such axis, similarly for the second entry in the dictionary and the y axis.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of dictionaries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.GPNewPoints">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">GPNewPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">XG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PCA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y_column_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.GPNewPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Adaptive sampling approach to select and return a set of points with highest variance to be added to the original
+dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>numpy.ndarray</em>) – Current input data.</p></li>
+<li><p><strong>Y</strong> (<em>numpy.ndarray</em>) – Current output data.</p></li>
+<li><p><strong>XG</strong> (<em>numpy.ndarray</em>) – Set of candidate points.</p></li>
+<li><p><strong>newPoints</strong> (<em>int</em><em>, </em><em>default 1</em>) – Number of points to select from <code class="docutils literal notranslate"><span class="pre">XG</span></code>.</p></li>
+<li><p><strong>PCA</strong> (<em>bool</em><em>, </em><em>default False</em>) – To analyze points in PCA coordinates or original.</p></li>
+<li><p><strong>Y_column_idx</strong> (<em>int</em><em>, </em><em>default 0</em><em> (</em><em>becomes 1 in Quasar</em><em>)</em>) – Which column of Y to use to analyze where to add new poitns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Xnew</strong> – Set of new optimal points selected from <code class="docutils literal notranslate"><span class="pre">XG</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.INVD">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">INVD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Neighbours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.INVD" title="Permalink to this definition"></a></dt>
+<dd><p>Inverse distance interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>Neighbours</strong> (<em>int</em><em>, </em><em>default 3</em>) – Number of neighbours to reference.</p></li>
+<li><p><strong>Power</strong> (<em>float</em><em>, </em><em>{0</em><em>, </em><em>0.25</em><em>, </em><em>0.5</em><em>, </em><em>2.0</em><em>, </em><em>4.0}</em><em>, </em><em>default 2.0</em>) – Order of interpoaltor function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.PCA">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">PCA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">biplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IstandardizeY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.PCA" title="Permalink to this definition"></a></dt>
+<dd><p>PCA transform of an input dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_A</strong> (<em>pandas.DataFrame</em>) – Data to transform.</p></li>
+<li><p><strong>kernel</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 0</em>) – 0: None,
+1: Polynomial,
+2: RBF,
+3: sigmoid.</p></li>
+<li><p><strong>biplot</strong> (<em>int</em><em>, </em><em>default 0</em>) – <p>Type of biplot to draw.</p>
+<p>0: distance biplot,
+1: correlation biplot.</p>
+</p></li>
+<li><p><strong>IstandardizeY</strong> (<em>int</em><em>, </em><em>default 1</em>) – 0: no standardization (raw data).
+1: ((Y-Ym)/std)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>yq</strong> – Dataset containing the transformed data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.PCA_scatterplot">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">PCA_scatterplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.PCA_scatterplot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot a PCA representation of an input DoE file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mat_A</strong> (<em>numpy.ndarray</em>) – Data to plot after PCA transformation on <code class="docutils literal notranslate"><span class="pre">Quasar.PCA()</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ax_list</strong> – List containing a dictionary per plot to create. The key of the first entry in the dictionary will be the x axis name and the value the content to plot in such axis, similarly for the second entry in the dictionary and the y axis.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of dictionaries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.POD_ARBF">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">POD_ARBF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Save_Files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rda_Flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.POD_ARBF" title="Permalink to this definition"></a></dt>
+<dd><p>POD ARBF interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>Normalize</strong> (<em>int</em><em>, </em><em>default 1</em>) – <p>Type of normalization to be performed</p>
+<p>0: No normalization,
+1: Min/Max normalization,
+2: Variance normalization.</p>
+</p></li>
+<li><p><strong>Save_Files</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Flag to generate decomposition files.</p>
+<p>0: no storage,
+1: write as ASCII,
+-1: write as binary,
+2: read ASCII files,
+-2: read binary file.</p>
+</p></li>
+<li><p><strong>Modes</strong> (<em>int</em><em>, </em><em>default 0</em>) – Number of active modes.</p></li>
+<li><p><strong>Tolerance</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – Real parameter to calculate automatically the mode number to be kept.</p></li>
+<li><p><strong>Rda_flag</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Option to generate many files about decomposition.</p>
+<p>0: no files generated.
+1: files generated.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.POD_INVD">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">POD_INVD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Save_Files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rda_Flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Neighbours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.POD_INVD" title="Permalink to this definition"></a></dt>
+<dd><p>POD INVD interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>Normalize</strong> (<em>int</em><em>, </em><em>default 0</em>) – <p>Type of normalization to be performed</p>
+<p>0: No normalization,
+1: Min/Max normalization,
+2: Variance normalization.</p>
+</p></li>
+<li><p><strong>Save_Files</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Flag to generate decomposition files.</p>
+<p>0: no storage,
+1: write as ASCII,
+-1: write as binary,
+2: read ASCII files,
+-2: read binary file.</p>
+</p></li>
+<li><p><strong>Modes</strong> (<em>int</em><em>, </em><em>default 0</em>) – Number of active modes.</p></li>
+<li><p><strong>Tolerance</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – Real parameter to calculate automatically the mode number to be kept.</p></li>
+<li><p><strong>Rda_flag</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Option to generate many files about decomposition.</p>
+<p>0: no files generated,
+1: files generated.</p>
+</p></li>
+<li><p><strong>Neighbours</strong> (<em>int</em><em>, </em><em>default 3</em>) – Number of neighbours to reference.</p></li>
+<li><p><strong>Power</strong> (<em>float</em><em>, </em><em>{0</em><em>, </em><em>0.25</em><em>, </em><em>0.5</em><em>, </em><em>2.0</em><em>, </em><em>4.0}</em><em>, </em><em>default 2.0</em>) – Order of interpoaltor function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.POD_RBF">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">POD_RBF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Save_Files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rda_Flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">InterpMethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'multiquadric'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.POD_RBF" title="Permalink to this definition"></a></dt>
+<dd><p>POD RBF interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>Normalize</strong> (<em>int</em><em>, </em><em>default 1</em>) – <p>Type of normalization to be performed.</p>
+<p>0: No normalization,
+1: Min/Max normalization,
+2: Variance normalization.</p>
+</p></li>
+<li><p><strong>Save_Files</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Flag to generate decomposition files.</p>
+<p>0: no storage,
+1: write as ASCII,
+-1: write as binary,
+2: read ASCII files,
+-2: read binary file.</p>
+</p></li>
+<li><p><strong>Modes</strong> (<em>int</em><em>, </em><em>default 0</em>) – Number of active modes.</p></li>
+<li><p><strong>Tolerance</strong> (<em>float</em><em>, </em><em>default 0.0.</em>) – Real parameter to calculate automatically the mode number to be kept.</p></li>
+<li><p><strong>Rda_flag</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Option to generate many files about decomposition.</p>
+<p>0: no files generated,
+1: files generated.</p>
+</p></li>
+<li><p><strong>InterpMethod</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'multiquadratic'</em>) – <p>Define a radial basis function (type of interpolation)</p>
+<p>0: ‘multiquadratic’,
+1: ‘invMultiquadratic’,
+2: ‘thinPlateSpline’,
+3: ‘gaussian’,
+4. ‘linear’.</p>
+</p></li>
+<li><p><strong>Radius</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – 0.0: to be automatically calculated from data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.POD_kriging">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">POD_kriging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Save_Files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rda_Flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BasisFunction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">StationarityFunction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NuggetEffect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pulsation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.POD_kriging" title="Permalink to this definition"></a></dt>
+<dd><p>POD Kriging interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>Normalize</strong> (<em>int</em><em>, </em><em>default 0</em>) – <p>Type of normalization to be performed</p>
+<p>0: No normalization,
+1: Min/Max normalization,
+2: Variance normalization.</p>
+</p></li>
+<li><p><strong>Save_Files</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Flag to generate decomposition files.</p>
+<p>0: no storage,
+1: write as ASCII,
+-1: write as binary,
+2: read ASCII files,
+-2: read binary file.</p>
+</p></li>
+<li><p><strong>Modes</strong> (<em>int</em><em>, </em><em>default 0</em>) – Number of active modes.</p></li>
+<li><p><strong>Tolerance</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – Real parameter to calculate automatically the mode number to be kept.</p></li>
+<li><p><strong>Rda_flag</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'No'</em>) – <p>Option to generate many files about decomposition.</p>
+<p>0: no files generated,
+1: files generated.</p>
+</p></li>
+<li><p><strong>BasisFunction</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'linear'</em>) – <p>Define basis function (type of interpolation).</p>
+<p>0: ‘none’,
+1: ‘constant’,
+2: ‘linear’,
+3: ‘quadratic’,
+4: ‘cubic’,
+5: ‘trigonometric’.</p>
+</p></li>
+<li><p><strong>StationarityFunction</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'h1'</em>) – <p>Define stationarity function (capacity of a response function to change its behavior).</p>
+<p>0: ‘h1’,
+1: ‘h2’,
+2: ‘h3’,
+3: ‘exp’,
+4: ‘matern32’.</p>
+</p></li>
+<li><p><strong>NuggetEffect</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – <p>Real values used for trigonometic radial basis function.</p>
+<p>0.0: not used.</p>
+</p></li>
+<li><p><strong>Pulsation</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – <p>Real values used for trigonometic radial basis function.</p>
+<p>0.0: not used.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._POD_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.RBF">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">RBF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">InterpMethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.RBF" title="Permalink to this definition"></a></dt>
+<dd><p>RBF interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>InterpMethod</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'linear'</em>) – <p>Define a radial basis function (type of interpolation)</p>
+<p>0: ‘multiquadratic’,
+1: ‘invMultiquadratic’,
+2: ‘thinPlateSpline’,
+3: ‘gaussian’,
+4. ‘linear’.</p>
+</p></li>
+<li><p><strong>Radius</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – 0.0: to be automatically calculated from data.</p></li>
+<li><p><strong>Normalize</strong> (<em>int</em><em>, </em><em>default 1</em>) – <p>Type of normalization to be performed</p>
+<p>0: No normalization,
+1: Min/Max normalization,
+2: Variance normalization.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.gp_new_points">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">gp_new_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">XG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PCA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y_column_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.gp_new_points" title="Permalink to this definition"></a></dt>
+<dd><p>Adaptive sampling approach to select and return a set of points with highest variance to be added to the original
+dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>numpy.ndarray</em>) – Current input data.</p></li>
+<li><p><strong>Y</strong> (<em>numpy.ndarray</em>) – Current output data.</p></li>
+<li><p><strong>XG</strong> (<em>numpy.ndarray</em>) – Set of candidate points.</p></li>
+<li><p><strong>newPoints</strong> (<em>int</em><em>, </em><em>default 1</em>) – Number of points to select from <code class="docutils literal notranslate"><span class="pre">XG</span></code>.</p></li>
+<li><p><strong>PCA</strong> (<em>bool</em><em>, </em><em>default False</em>) – To analyze points in PCA coordinates or original.</p></li>
+<li><p><strong>Y_column_idx</strong> (<em>int</em><em>, </em><em>default 0</em><em> (</em><em>becomes 1 in Quasar</em><em>)</em>) – Which column of Y to use to analyze where to add new poitns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Xnew</strong> – Set of new optimal points selected from <code class="docutils literal notranslate"><span class="pre">XG</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.kriging">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">kriging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BasisFunction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">StationarityFunction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NuggetEffect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pulsation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.kriging" title="Permalink to this definition"></a></dt>
+<dd><p>Kriging interpolator function.</p>
+<p>Called by the user providing necessary input data. This function will check the format of the input arguments and
+call <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Training data input.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – Training data output.</p></li>
+<li><p><strong>xq</strong> (<em>numpy.ndarray</em>) – Validation data input, from which to make predictions.</p></li>
+<li><p><strong>BasisFunction</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'linear'</em>) – <p>Define basis function (type of interpolation).</p>
+<p>0: ‘none’.
+1: ‘constant’.
+2: ‘linear’.
+3: ‘quadratic’.
+4: ‘cubic’.
+5: ‘trigonometric’.</p>
+</p></li>
+<li><p><strong>StationarityFunction</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>default 'h1'</em>) – <p>Define stationarity function (capacity of a response function to change its behavior).</p>
+<p>0: ‘h1’,
+1: ‘h2’,
+2: ‘h3’,
+3: ‘exp’,
+4: ‘matern32’.</p>
+</p></li>
+<li><p><strong>NuggetEffect</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – <p>Real values used for trigonometic radial basis function.</p>
+<p>0.0: not used.</p>
+</p></li>
+<li><p><strong>Pulsation</strong> (<em>float</em><em>, </em><em>default 0.0</em>) – <p>Real values used for trigonometic radial basis function.</p>
+<p>0.0: not used.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output predicitons corresponding to <code class="docutils literal notranslate"><span class="pre">xq</span></code>, extracted from <code class="docutils literal notranslate"><span class="pre">QuasarPy._direct_interpolator</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QuasarPy.normalize">
+<span class="sig-prename descclassname"><span class="pre">QuasarPy.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QuasarPy.normalize" title="Permalink to this definition"></a></dt>
+<dd><p>Function to rescale data values into a range of [0,1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mat_A</strong> (<em>numpy.ndarray</em>) – Data to be scaled.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>yq</strong> – Scaled data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Hexagon Manufacturing Intelligence, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
