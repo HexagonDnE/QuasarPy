@@ -8,7 +8,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=C:\Users\user\AppData\Local\Programs\Python\Python310\Scripts\sphinx-build
 )
 set SOURCEDIR=docs-src
-set BUILDDIR=docs
+set BUILDDIR=docs-bld
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
